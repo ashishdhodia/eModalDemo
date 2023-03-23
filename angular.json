@@ -22,7 +22,9 @@
             "styles": [
               "src/e-theme.scss",
               "src/styles.css",
-              "src/e-styles.css"
+              "src/e-styles.css",
+              "src/e-layout.css",
+              "src/e-component.css"
             ],
             "scripts": []
           },
@@ -80,7 +82,9 @@
             "styles": [
               "src/e-theme.scss",
               "src/styles.css",
-              "src/e-styles.css"
+              "src/e-styles.css",
+              "src/e-layout.css",
+              "src/e-component.css"
             ],
             "scripts": []
           }

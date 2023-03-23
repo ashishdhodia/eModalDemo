@@ -1,0 +1,51 @@
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    
+    src: local('../material-design-icons/font/MaterialIcons-Regular.ttf'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+
+
+/* CSS Grid Classes */
+
+.e-d-grid{
+    display:grid;
+}
+
+
+
+
+/* CSS Flex Classes */
+
+.e-d-flex{
+    display:flex;
+}
+
+
+/* eModal AppHeader Classes */
+
+.e-appheader{
+    display:grid;
+    grid-template-rows:64px;
+}
+
+.e-appheader-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px;
+}
+
+.e-appheader-content-inner{
+    display:flex;
+    align-items:center;
+    column-gap:12px;
+}

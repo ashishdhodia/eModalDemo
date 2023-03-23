@@ -1,3 +1,23 @@
+<!-- App Header -->
+
+<div class="e-appheader">
+  <div class="e-appheader-content">
+    <!-- First inner div has Menu Icon, Logo and App Title -->
+    <div class="e-appheader-content-inner">
+      <span class="material-icons">menu</span>
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Example home icon"
+        fontIcon="home"
+      ></mat-icon>
+    </div>
+    <!-- Second Inner has all the icons that are on the header -->
+    <div class="e-appheader-content-inner"></div>
+  </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------- -->
+
 <div class="e-actions-bar">
   <button mat-raised-button class="e-btn e-btn-primary">Add Driver</button>
 </div>
@@ -5,19 +25,24 @@
 <div class="e-main-content-wrapper">
   <div class="e-list-panel">
     <ul class="e-list-group e-w-100 e-column-gap-12">
+      <!-- Each List Item -->
       <li class="e-list-item e-justify-between">
-        <!-- <div class="e-d-flex e-column-gap-12"> -->
-        <img src="assets/dp-01.png" alt="" class="img-thumbnail" />
-        <div class="e-list-content">
-          <h2 class="e-title">Freddie Osborne</h2>
-          <p class="e-sub-title">fosborne@outlook.com</p>
-          <p class="e-sub-title">+1-650-513-0514</p>
+        <div class="e-d-flex e-column-gap-12">
+          <!-- Image   -->
+          <img src="assets/dp-01.png" alt="" class="img-thumbnail" />
+          <!-- Name & Other Details -->
+          <div class="e-list-content">
+            <h2 class="e-title">Freddie Osborne</h2>
+            <p class="e-sub-title">fosborne@outlook.com</p>
+            <p class="e-sub-title">+1-650-513-0514</p>
+          </div>
         </div>
-        <!-- </div> -->
+        <!-- Status Badge  -->
         <div class="badge">
           <mat-chip class="e-chip-active"> Active </mat-chip>
         </div>
       </li>
+      <!-- End of List Item----- -->
     </ul>
   </div>
   <div class="e-details-panel"></div>
@@ -142,6 +167,5 @@
   </div>
 </section>
 <mat-divider></mat-divider>
-
 
 <router-outlet></router-outlet>

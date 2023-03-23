@@ -413,7 +413,9 @@ a{
 }
 
 .e-list-content{
-  row-gap:6px;
+  display:flex;
+  flex-direction:column;
+  row-gap:2px;
 }
 
 .e-title{

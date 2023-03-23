@@ -1,0 +1,27 @@
+
+:root {
+    --interaction-color: #276CCE;
+    --primary-text-color:#212121;
+    --secondary-text-color: #757575;
+    --border-color:#DEDEDE;
+    --container-x-padding: 0 12px;
+    --container-y-padding: 8px 0;
+    --container-padding: 8px;
+    --body-text-color: #222222;
+    --success-color:#00701c;
+    --success-bg-color:#E0F1DD;
+  }
+
+
+/* Button Styles */
+
+.e-btn{
+    font-size:15px !important;
+    font-weight:500;
+    letter-spacing:normal !important;
+  }
+  
+  .e-btn-primary{
+    background: var(--interaction-color) !important;
+    Color:#FFFFFF !important;
+  }
