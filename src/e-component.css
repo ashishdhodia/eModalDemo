@@ -1,8 +1,154 @@
 
+
+/* Reset Styles */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of Reset Styles -------------------------------------------------- */
+
+/* Import Text Fonts --------- */
+
+/* Roboto */
+    @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Handlee */
+    @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+  
+
+/* CSS Variables */
+
 :root {
     --interaction-color: #276CCE;
     --primary-text-color:#212121;
-    --secondary-text-color: #757575;
+    --secondary-text-color: rgba(0,0,0,0.54);
     --border-color:#DEDEDE;
     --container-x-padding: 0 12px;
     --container-y-padding: 8px 0;
@@ -12,16 +158,203 @@
     --success-bg-color:#E0F1DD;
   }
 
+  /* General Body Properties */
 
-/* Button Styles */
-
-.e-btn{
-    font-size:15px !important;
-    font-weight:500;
+  body {
+    display: grid;
+    align-content: start;
+    row-gap: 0;
+    background: #ffffff;
+    margin: 0;
+    color: var(--body-text-color) !important;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: "Roboto", sans-serif !important;
+    font-size:1rem !important;
     letter-spacing:normal !important;
   }
-  
-  .e-btn-primary{
-    background: var(--interaction-color) !important;
-    Color:#FFFFFF !important;
+
+
+/* eModal AppHeader Classes */
+
+.e-appheader{
+    display:grid;
+    grid-template-rows:64px;
+    background:#F5F5F5;
+}
+
+.e-appheader-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px;
+}
+
+.e-appheader-content-inner{
+    display:flex;
+    align-items:center;
+    column-gap:12px;
+}
+
+.e-apptitle{
+    font-family:'handlee', sans-serif;
+    font-size:1.25rem;
+    font-weight:400;
   }
+
+/* Main Content Wrapper Layout - 30% Sidebar and 70% Details */
+
+
+.e-main-content-wrapper {
+    display: grid;
+    grid-template-columns: 30% auto;
+    align-items: start;
+    background: #ffffff;
+    padding: var(--container-padding);
+    column-gap: 8px;
+  }
+
+  /* List Panel Classes */
+
+  .e-list-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    box-sizing: border-box;
+    min-width:338px;
+    /*Demo Background Color - Should be commented out*/
+    /* background: #d0edc8;   */
+    padding: var(--container-padding);
+    border:1px solid var(--border-color);
+    border-radius:4px;
+    row-gap:8px;
+  }
+
+  .e-list-group {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width:100%;
+    border:1px solid var(--border-color);
+    border-radius:4px;
+  }
+
+  .e-list-item {
+    display:flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width:100%;
+    min-width:320px;
+    max-width:500px;
+    row-gap:8px;
+    border-bottom:1px solid var(--border-color);
+    cursor:pointer;
+    padding:8px;
+  }
+
+  .e-list-item:last-child{
+    border:none;
+  }
+
+  .e-list-item-inner{
+    display:flex;
+    align-items: start;
+    column-gap:8px;
+  }
+
+  .e-list-item-text{
+    display:flex;
+    flex-direction:column;
+    row-gap:4px;
+    color:var(--secondary-text-color);
+  }
+
+  .e-list-item-title{
+    font-size:1.25rem;
+    color:var(--body-text-color);
+  }
+
+  .img-thumbnail {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background: #ffffff;
+  }
+
+  /* Badge / Chip Classes */
+
+  .e-chip-active{
+    background-color: var(--success-bg-color) !important;
+    font-weight: 500;
+    border:1px solid var(--success-color) !important;
+  }
+  
+  .e-chip-inactive{
+    background-color: #F0F0F0 !important;
+    font-weight: 500;
+    border:1px solid #BDBDBD;
+  }
+  
+  .e-chip-active .mdc-evolution-chip__text-label {
+    color:var(--success-color) !important;
+  }
+  
+  .e-chip-inactive .mdc-evolution-chip__text-label {
+    color:var(--secondary-text-color) !important;
+  }
+
+  /* Details Panel Classes */
+
+  .e-details-panel {
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    box-sizing: border-box;
+    /*Demo Background Color - Should be commented out*/
+    /* background: #fff1e9; */
+    border:1px solid var(--border-color);
+    border-radius:4px;
+    height:auto !important;
+  }
+
+  .e-details-content{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: start;
+    box-sizing: border-box;
+    width:100%;
+  }
+
+  .e-details-content-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: start;
+    box-sizing: border-box;
+    background:#FAFAFA;
+    padding: var(--container-padding);
+    width:100%;
+  }
+
+  .e-btn-secondary{
+    font-size:1rem;
+    font-weight:500;
+    color:var(--secondary-text-color) !important;
+  }
+
+  /* Tabs Styles ------------------------- */
+
+  .e-details-tabs .mdc-tab__text-label {
+    font-size:1.1rem !important;
+  }
+
+  .e-details-tab-content{
+    padding:12px;
+  }
+
+
+
+
+

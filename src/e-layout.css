@@ -1,51 +1,364 @@
 
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+/* Reset Styles */
 
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of Reset Styles -------------------------------------------------- */
+
+/* Import Text Fonts --------- */
+
+/* Roboto */
+    @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Handlee */
+    @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+  
+
+/* CSS Variables */
+
+:root {
+
+    --body-text-color: #222222;
+    --interaction-color: #276CCE;
+    --primary-color:#222222;
+    --secondary-color: rgba(0,0,0,0.54);
+    --tertiary-color:#AAAAAA;
+    --border-color:#DEDEDE;
+    --success-color:#00701c;
+    --success-bg-color:#E0F1DD;
     
-    src: local('../material-design-icons/font/MaterialIcons-Regular.ttf'),
-      local('MaterialIcons-Regular'),
-      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+
+  .e-d-flex{
+    display:flex;
+  }
+
+  .e-flex-row{
+    flex-direction: row;
+  }
+
+  .e-flex-column{
+    flex-direction:column;
+  }
+
+  .e-justify-content-between{
+    justify-content: space-between;
+  }
+
+  .e-justify-content-start{
+    justify-content: flex-start;
+  }
+
+  .e-align-items-center{
+    align-items: center;
+  }
+
+  .e-align-items-start{
+    align-items: start;
+  }
+
+  .e-row-gap-6{
+    row-gap:6px;
+  }
+
+  .e-row-gap-8{
+    row-gap:8px;
+  }
+
+  .e-row-gap-12{
+    row-gap:12px;
+  }
+
+  .e-row-gap-16{
+    row-gap:16px;
   }
 
 
-/* CSS Grid Classes */
+  .e-row-gap-24{
+    row-gap:24px;
+  }
 
-.e-d-grid{
-    display:grid;
-}
+  .e-row-gap-36{
+    row-gap:36px;
+  }
 
+  .e-row-gap-48{
+    row-gap:48px;
+  }
 
+  .e-column-gap-8{
+    column-gap:8px;
+  }
 
-
-/* CSS Flex Classes */
-
-.e-d-flex{
-    display:flex;
-}
-
-
-/* eModal AppHeader Classes */
-
-.e-appheader{
-    display:grid;
-    grid-template-rows:64px;
-}
-
-.e-appheader-content{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:12px;
-}
-
-.e-appheader-content-inner{
-    display:flex;
-    align-items:center;
+  .e-column-gap-12{
     column-gap:12px;
-}
+  }
+
+  .e-column-gap-24{
+    column-gap:24px;
+  }
+
+  .e-column-gap-36{
+    column-gap:36px;
+  }
+
+  .e-column-gap-48{
+    column-gap:48px;
+  }
+
+  .e-column-gap-60{
+    column-gap:60px;
+  }
+
+  .m-12{
+    margin:12px;
+  }
+
+  .m-x-12{
+    margin:0 12px;
+  }
+
+  .m-y-12{
+    margin:12px 0;
+  }
+
+  .m-16{
+    margin:16px;
+  }
+
+  .m-x-16{
+    margin:0 16px;
+  }
+
+  .m-y-16{
+    margin:16px 0;
+  }
+
+  .m-24{
+    margin:24px;
+  }
+
+  .m-x-24{
+    margin:0 24px;
+  }
+
+  .m-y-24{
+    margin:24px 0;
+  }
+
+  .m-36{
+    margin:36px;
+  }
+
+  .m-x-36{
+    margin:0 36px;
+  }
+
+  .m-y-36{
+    margin:36px 0;
+  }
+
+  .p-8{
+    padding:8px;
+  }
+
+  .p-x-8{
+    padding:0 8px;
+  }
+
+  .p-y-8{
+    padding: 8px 0;
+  }
+
+
+
+
+  /* Font Sizes -------------------------------------- */
+
+  .fs-12{
+    font-size:12px;
+  }
+
+  .fs-16{
+    font-size:16px;
+  }
+
+  .fs-18{
+    font-size:18px;
+  }
+
+  .fs-20{
+    font-size:20px;
+  }
+
+  .fs-24{
+    font-size:24px;
+  }
+
+  .fw-light{
+    font-weight:lighter;
+  }
+
+  .fw-normal{
+    font-weight:normal
+  }
+
+  .fw-medium{
+    font-weight:500;
+  }
+
+  .fw-bold{
+    font-weight:bold;
+  }
+
+
+  /* Color Classes */
+
+  .primary-color{
+    color:var(--primary-color);
+  }
+
+  .secondary-color{
+    color:var(--secondary-color);
+  }
+
+  .tertiary-color{
+    color:var(--tertiary-color);
+  }
+
+  .interaction-color{
+    color:var(--interaction-color);
+  }
+
+
+
+
+
